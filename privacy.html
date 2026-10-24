@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duebell LAN Privacy Policy / プライバシーポリシー</title>
+<style>
+  /* Duebell IT の privacy.html と同じ構成。色はアプリの画面（生成り・墨・朱）に揃える */
+  :root { --ink:#2B2A26; --accent:#B8432F; --line:#CFC8B8; --soft:#6B665C; --paper:#F4F1EA; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI","Meiryo","Yu Gothic UI",system-ui,sans-serif;
+    color: var(--ink); line-height: 1.75; margin: 0;
+    background: var(--paper);
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 32px 22px 64px; }
+  header { border-bottom: 3px solid var(--ink); padding-bottom: 14px; margin-bottom: 8px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  h1 .brand { font-family: "Bahnschrift","Segoe UI",sans-serif; letter-spacing: 1px; }
+  .meta { color: var(--soft); font-size: .9rem; }
+  .summary { background:#FBF9F4; border:1px solid var(--line); border-left:5px solid var(--accent);
+             border-radius:6px; padding:12px 16px; margin:16px 0; font-weight:600; }
+  h2 { color: var(--accent); font-size: 1.25rem; margin: 40px 0 6px; }
+  h3 { font-size: 1.02rem; margin: 22px 0 4px; border-left: 4px solid var(--accent); padding-left: 8px; }
+  p, li { font-size: .98rem; }
+  code { background:#ECE7DC; padding:1px 6px; border-radius:4px; font-family:Consolas,monospace; font-size:.9em; word-break: break-all; }
+  hr { border:none; border-top:1px solid var(--line); margin:36px 0; }
+  .lang-divider { text-align:center; color:var(--soft); font-size:.85rem; letter-spacing:2px; margin:8px 0; }
+  footer { margin-top: 40px; color: var(--soft); font-size:.85rem; text-align:center; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1><span class="brand">Duebell LAN</span> &mdash; プライバシーポリシー / Privacy Policy</h1>
+    <div class="meta">最終更新日 / Last updated: 2026-10-22 ・ 発行者 / Publisher: <strong>G-Works</strong></div>
+  </header>
+
+  <!-- ================= 日本語 ================= -->
+  <h2>日本語</h2>
+
+  <h3>はじめに</h3>
+  <p>Duebell LAN（以下「本アプリ」）は、利用者の社内ネットワークにつながっている機器を見つけて一覧にする Windows 向けデスクトップアプリです。本ポリシーは、本アプリが利用者の情報をどのように取り扱うかを説明します。</p>
+  <div class="summary">本アプリは個人情報を一切収集しません。走査の結果と設定は利用者のデバイス内にのみ保存され、開発者や第三者に送信されることはありません。</div>
+
+  <h3>1. 本アプリが扱う情報</h3>
+  <ul>
+    <li>本アプリは利用者の個人情報を収集しません。</li>
+    <li><b>走査の結果</b>：利用者が指定した範囲の機器について、IP アドレス・MAC アドレス・メーカー・ホスト名・コンピューター名・ワークグループ／ドメイン・開いているポート・機種・シリアル番号・ファームウェア・OS とその版・CPU・メモリ・ディスク・プリンターの消耗品の残量などを、機器から読み取ります。結果は利用者のデバイス内のファイル（<code>DuebellLan\duebell_lan.db</code>。Microsoft Store 版ではアプリ専用の領域）に、前回との比較のため新しい 100 回分まで保存されます。</li>
+    <li><b>設定</b>：最後に走査した範囲、SNMP のコミュニティ名と v3 のユーザー名・パスワード、WMI のユーザー名とパスワード、Duebell IT の台帳の場所、ウィンドウの位置と大きさを <code>DuebellLan\settings.json</code> に、表示言語・同意した免責事項の版・一覧の列幅を <code>DuebellLan\duebell_lan.ini</code> に保存します。<b>コミュニティ名・パスワード・資格情報は Windows の DPAPI で暗号化し、この PC のこの Windows ユーザーだけが元に戻せます。</b>ログや出力ファイルには書きません。</li>
+    <li><b>Duebell IT への取り込み</b>：利用者が「Duebell IT へ取り込む」を選び、確認してチェックした機器だけを、利用者が指定した Duebell IT の台帳ファイル（既定は「ドキュメント」の <code>DuebellIT\duebell_assets.db</code>）に書き込みます。書き込む前に台帳のバックアップを同じ場所の <code>backup</code> フォルダに作ります。</li>
+    <li>これらのファイルが外部へ送信されることはなく、開発者がアクセスすることもできません。</li>
+    <li>コンピューター名・ホスト名などには、従業員の氏名が含まれることがあります。走査の結果の管理（アクセスできる人の範囲、保存場所、保存期間など）は利用者（事業者）の責任で行ってください。</li>
+  </ul>
+
+  <h3>2. 利用目的</h3>
+  <p>上記のデータは、本アプリの機能（機器の一覧と種別の判定、前回との差分、CSV・HTML の出力、Duebell IT への取り込み、表示と設定の復元）を提供する目的にのみ使用します。それ以外の目的では使用しません。</p>
+
+  <h3>3. ネットワークの使い方</h3>
+  <p>本アプリは、利用者が走査を始めたときにだけ、利用者が指定した範囲の機器に次の問い合わせを送ります：ping（ICMP）、ARP、決められたポートへの通常の TCP 接続、機器の Web 画面のタイトルの取得、名前の問い合わせ（DNS・NetBIOS・mDNS）、機器の案内の問い合わせ（SSDP・WS-Discovery）、SNMP と WMI（設定した場合だけ）。名前の逆引き（DNS）は Windows に設定された DNS サーバーに問い合わせます。</p>
+  <p>本アプリはインターネット上の開発者のサーバーに接続しません。テレメトリ・利用解析（アナリティクス）・広告・トラッキング・ユーザーアカウントの仕組みを一切含みません。既定ではプライベートアドレス（10.x・172.16〜31.x・192.168.x・169.254.x）だけを調べます。管理する権限のあるネットワークでのみお使いください。</p>
+  <p>本アプリは無料で、アプリ内購入はありません。Microsoft Store からの入手・更新に伴う情報の取り扱いは <a href="https://privacy.microsoft.com/privacystatement">Microsoft のプライバシーに関する声明</a>に従います。本アプリが開発者に情報を送ることはありません。</p>
+
+  <h3>4. 第三者への提供</h3>
+  <p>本アプリはデータを収集しないため、いかなるデータも第三者へ販売・提供・開示しません。</p>
+
+  <h3>5. 書き出し機能について</h3>
+  <p>CSV・HTML への書き出しは、利用者が明示的に操作したときにのみ実行され、書き出し先は利用者が指定した場所です。コミュニティ名・パスワードは書き出しません。</p>
+
+  <h3>6. データの保存期間と削除</h3>
+  <p>走査の結果は新しい 100 回分を残し、それより古いものは自動で削除します。Microsoft Store 版では、本アプリをアンインストールすると走査の結果と設定も削除されます。Duebell IT の台帳に取り込んだ内容は Duebell IT のデータとして残ります（削除は Duebell IT で行ってください）。</p>
+
+  <h3>7. セキュリティ</h3>
+  <p>データは利用者のデバイスにのみ保存されるため、その安全性は利用者のデバイス・ネットワークのセキュリティ対策に依存します。資格情報は DPAPI で暗号化して保存します。</p>
+
+  <h3>8. 子どものプライバシー</h3>
+  <p>本アプリは、子どもを含むいかなる利用者からも情報を収集しません。</p>
+
+  <h3>9. 本ポリシーの変更</h3>
+  <p>本ポリシーは必要に応じて改定することがあります。最新版はこのページに掲載します。</p>
+
+  <h3>10. お問い合わせ</h3>
+  <p>本ポリシーや本アプリに関するお問い合わせ先：<a href="mailto:G.Works.902@gmail.com">G.Works.902@gmail.com</a></p>
+
+  <hr>
+  <div class="lang-divider">— ENGLISH —</div>
+
+  <!-- ================= English ================= -->
+  <h2>English</h2>
+
+  <h3>Introduction</h3>
+  <p>Duebell LAN ("the App") is a Windows desktop application that finds the devices connected to your own office network and lists them. This policy explains how the App handles your information.</p>
+  <div class="summary">The App does not collect any personal data. Scan results and settings are stored only on your device and are never sent to the developer or to third parties.</div>
+
+  <h3>1. Information the App handles</h3>
+  <ul>
+    <li>The App does not collect any personal information.</li>
+    <li><b>Scan results</b>: for the devices in the range you enter, the App reads their IP and MAC addresses, maker, host name, computer name, workgroup or domain, open ports, model, serial number, firmware, operating system and version, CPU, memory, disks and printer supply levels. The results are stored on your device (<code>DuebellLan\duebell_lan.db</code>; in the Microsoft Store version, in the App's own storage); the latest 100 scans are kept to show what changed.</li>
+    <li><b>Settings</b>: the last range scanned, SNMP community names and the v3 user name and passwords, the WMI user name and password, the location of the Duebell IT ledger and the window position are stored in <code>DuebellLan\settings.json</code>; the display language, the version of the disclaimer you agreed to and column widths in <code>DuebellLan\duebell_lan.ini</code>. <b>Community names, passwords and credentials are encrypted with Windows DPAPI so that only this Windows user on this PC can decrypt them.</b> They are never written to logs or exports.</li>
+    <li><b>Import into Duebell IT</b>: only when you choose "Import into Duebell IT" and tick devices after reviewing them, the App writes them into the Duebell IT ledger file you select (by default <code>DuebellIT\duebell_assets.db</code> in Documents), after making a backup in the <code>backup</code> folder next to it.</li>
+    <li>These files never leave your device, and the developer cannot access them.</li>
+    <li>Computer and host names may contain employees' names. You are responsible, as the organisation, for managing the scan results (who can access them, where and how long they are kept).</li>
+  </ul>
+
+  <h3>2. How information is used</h3>
+  <p>The data is used only to provide the App's functionality (listing and classifying devices, showing changes since the last scan, CSV and HTML export, importing into Duebell IT, restoring the display and settings). It is not used for any other purpose.</p>
+
+  <h3>3. How the App uses the network</h3>
+  <p>Only when you start a scan, the App sends the following to the devices in the range you entered: ping (ICMP), ARP, ordinary TCP connections to a fixed list of ports, a request for the title of a device's web page, name queries (DNS, NetBIOS, mDNS), device announcements queries (SSDP, WS-Discovery), and SNMP and WMI (only if you set them up). Reverse DNS lookups go to the DNS server configured in Windows.</p>
+  <p>The App does not connect to any server of the developer on the internet. It contains no telemetry, analytics, advertising, tracking or user accounts. By default only private addresses (10.x, 172.16-31.x, 192.168.x, 169.254.x) are scanned. Use the App only on networks you administer.</p>
+  <p>The App is free and has no in-app purchases. Installing and updating it from the Microsoft Store is covered by the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>. The App itself never sends information to the developer.</p>
+
+  <h3>4. Sharing with third parties</h3>
+  <p>Because the App does not collect data, it does not sell, share or disclose any data to third parties.</p>
+
+  <h3>5. Export features</h3>
+  <p>Export to CSV and HTML runs only when you ask for it, and writes to the location you choose. Community names and passwords are never exported.</p>
+
+  <h3>6. Retention and deletion</h3>
+  <p>The latest 100 scans are kept; older ones are deleted automatically. In the Microsoft Store version, uninstalling the App also removes the scan results and settings. Devices imported into Duebell IT stay in Duebell IT's data (delete them in Duebell IT).</p>
+
+  <h3>7. Security</h3>
+  <p>Data is stored only on your device, so its security depends on the security measures of your device and network. Credentials are stored encrypted with DPAPI.</p>
+
+  <h3>8. Children's privacy</h3>
+  <p>The App does not collect information from anyone, including children.</p>
+
+  <h3>9. Changes to this policy</h3>
+  <p>This policy may be updated as needed. The latest version is always published on this page.</p>
+
+  <h3>10. Contact</h3>
+  <p>Questions about this policy or the App: <a href="mailto:G.Works.902@gmail.com">G.Works.902@gmail.com</a></p>
+
+  <footer>&copy; 2026 G-Works &nbsp;&middot;&nbsp; Duebell LAN</footer>
+</div>
+</body>
+</html>
